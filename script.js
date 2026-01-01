@@ -91,7 +91,7 @@ function wireButton() {
   const btn = document.getElementById("open-camera");
   if (!btn) return;
   btn.addEventListener("click", () => {
-    const url = "http://localhost:2525/templates/camera_temp/index.html";
+    const url = "http://unimportant-francesco-miry.ngrok-free.dev/templates/camera_temp/index.html";
     window.open(url, "_blank", "noopener,noreferrer");
   });
 }
