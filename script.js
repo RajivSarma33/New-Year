@@ -94,7 +94,6 @@ function wireButton() {
   if (!btn) return;
   btn.addEventListener("click", () => {
     const url = "http://localhost:2525/templates/camera_temp/index.html";
-    // Open in a new tab/window
     window.open(url, "_blank", "noopener,noreferrer");
   });
 }
