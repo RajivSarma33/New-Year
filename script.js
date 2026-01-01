@@ -20,7 +20,6 @@ function pickQuote() {
   const lastIndex = Number(localStorage.getItem("lastQuoteIndex"));
   let index = Math.floor(Math.random() * QUOTES.length);
   if (!Number.isNaN(lastIndex) && QUOTES.length > 1) {
-    // Avoid repeating the last one on refresh
     while (index === lastIndex) {
       index = Math.floor(Math.random() * QUOTES.length);
     }
@@ -41,7 +40,6 @@ function setCutePhoto() {
   const url = `https://picsum.photos/seed/${seed}/520/325`;
   img.src = url;
   img.onerror = () => {
-    // Fallback tiny SVG with hearts pattern
     const svg = encodeURIComponent(
       `<svg xmlns='http://www.w3.org/2000/svg' width='520' height='325'>
         <defs>
@@ -70,10 +68,10 @@ function generateConfetti(count = 120) {
     const piece = document.createElement("span");
     piece.className = "confetti";
 
-    const left = Math.random() * 100; // vw
-    const size = 6 + Math.random() * 8; // px
-    const delay = Math.random() * 2.5; // s
-    const duration = 5.5 + Math.random() * 4.5; // s
+    const left = Math.random() * 100;
+    const size = 6 + Math.random() * 8;
+    const delay = Math.random() * 2.5;
+    const duration = 5.5 + Math.random() * 4.5;
     const rotate = Math.floor(Math.random() * 360);
     const color = colors[Math.floor(Math.random() * colors.length)];
 
