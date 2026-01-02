@@ -91,7 +91,7 @@ function wireButton() {
   const btn = document.getElementById("open-camera");
   if (!btn) return;
   btn.addEventListener("click", () => {
-    const url = "http://unimportant-francesco-miry.ngrok-free.dev/templates/camera_temp/index.html";
+    const url = "https://www.google.com/logos/doodles/2026/new-years-day-2026-6753651837110748.2-2xa.gif";
     window.open(url, "_blank", "noopener,noreferrer");
   });
 }
